@@ -1,0 +1,15 @@
+<launch>
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="world_name" value="$(find carlike)/worlds/world1.world"/>
+    </include>
+
+    <param name="use_sim_time" value="true"/>
+    <param name="robot_description" textfile="$(find carlike)/urdf/carlike.urdf"/>
+
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/>
+
+    <node name="spawn_model" pkg="gazebo_ros" type="spawn_model"
+        args="-urdf -model carlike -param robot_description"
+        respawn="false" output="screen"/>
+</launch>

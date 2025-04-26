@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="carlike">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.00875115335701394 0.00145434175744656 0.0197970202504017"
+        rpy="0 0 0" />
+      <mass
+        value="0.247214592704957" />
+      <inertia
+        ixx="5.09846319877481E-05"
+        ixy="3.14502704634609E-10"
+        ixz="-2.29128940534497E-08"
+        iyy="0.000138337528123073"
+        iyz="6.07030102044357E-09"
+        izz="0.000156119311243302" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://carlike/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="base_link_material">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://carlike/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="r1_link">
+    <inertial>
+      <origin
+        xyz="-1.61017610694411E-08 -9.37641352755092E-09 -0.00737298761809616"
+        rpy="0 0 0" />
+      <mass
+        value="0.166945648008939" />
+      <inertia
+        ixx="6.72956832426971E-05"
+        ixy="1.48103139716417E-09"
+        ixz="2.77332492198932E-12"
+        iyy="6.72934094491944E-05"
+        iyz="1.61142783291259E-12"
+        izz="0.000113206411587748" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://carlike/meshes/r1_link.STL" />
+      </geometry>
+      <material
+        name="r1_link_material">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://carlike/meshes/r1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r1_joint"
+    type="continuous">
+    <origin
+      xyz="0.0535 -0.0597 -0.01"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="r1_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="r2_link">
+    <inertial>
+      <origin
+        xyz="1.79692601492976E-08 4.92844177968355E-09 -0.00737298761809657"
+        rpy="0 0 0" />
+      <mass
+        value="0.166945648008928" />
+      <inertia
+        ixx="6.72962683305461E-05"
+        ixy="7.21635123749427E-10"
+        ixz="-3.0940699050529E-12"
+        iyy="6.72928243613378E-05"
+        iyz="-8.45439850234771E-13"
+        izz="0.000113206411587741" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://carlike/meshes/r2_link.STL" />
+      </geometry>
+      <material
+        name="r2_link_material">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://carlike/meshes/r2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r2_joint"
+    type="continuous">
+    <origin
+      xyz="-0.0542 -0.0597 -0.01"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="r2_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="l1_link">
+    <inertial>
+      <origin
+        xyz="1.60286626341502E-08 9.50082462009005E-09 0.00737298761809532"
+        rpy="0 0 0" />
+      <mass
+        value="0.166945648008979" />
+      <inertia
+        ixx="6.72952077919434E-05"
+        ixy="1.745988953354E-09"
+        ixz="2.7576417613168E-12"
+        iyy="6.72938848999752E-05"
+        iyz="1.6381209825726E-12"
+        izz="0.000113206411587776" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://carlike/meshes/l1_link.STL" />
+      </geometry>
+      <material
+        name="l1_link_material">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://carlike/meshes/l1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l1_joint"
+    type="continuous">
+    <origin
+      xyz="0.0542 0.0597 -0.00999999999999999"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l1_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="l2_link">
+    <inertial>
+      <origin
+        xyz="1.47071355233175E-08 1.14404548820501E-08 0.00737298761809749"
+        rpy="0 0 0" />
+      <mass
+        value="0.166945648008911" />
+      <inertia
+        ixx="6.72947513832686E-05"
+        ixy="1.85578767187576E-09"
+        ixz="2.52983122062295E-12"
+        iyy="6.72943413086046E-05"
+        iyz="1.97179646661437E-12"
+        izz="0.000113206411587729" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://carlike/meshes/l2_link.STL" />
+      </geometry>
+      <material
+        name="l2_link_material">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://carlike/meshes/l2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l2_joint"
+    type="continuous">
+    <origin
+      xyz="-0.0542 0.0597 -0.01"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l2_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="lidar_link">
+    <inertial>
+      <origin
+        xyz="-0.0124775361822262 1.27378904138942E-05 -0.0236676181502307"
+        rpy="0 0 0" />
+      <mass
+        value="0.0380002378726907" />
+      <inertia
+        ixx="8.19362064344397E-06"
+        ixy="1.7203605393884E-08"
+        ixz="-2.240976969835E-06"
+        iyy="2.17926600540757E-05"
+        iyz="1.47459599019032E-09"
+        izz="2.74503938407733E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://carlike/meshes/lidar_link.STL" />
+      </geometry>
+      <material
+        name="lidar_link_material">
+        <color
+          rgba="0.188235294117647 0.231372549019608 0.588235294117647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://carlike/meshes/lidar_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lidar_joint"
+    type="fixed">
+    <origin
+      xyz="-0.0229989584518159 0.00331756857310458 0.126319"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="lidar_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+<gazebo reference="lidar_link">
+   <material>Gazebo/FlatBlack</material>
+   
+   <sensor type="ray" name="head_rplidar_sensor">
+      <pose>0 0 0 0 0 0</pose>
+      <visualize>true</visualize>
+      <update_rate>30.0</update_rate>
+      
+      <ray>
+         <scan>
+            <horizontal>
+               <samples>600</samples>
+               <resolution>1</resolution>
+               <min_angle>0.0</min_angle>
+               <max_angle>6.28319</max_angle>
+            </horizontal>
+         </scan>
+         
+         <range>
+            <min>0.120</min>
+            <max>10</max>
+            <resolution>0.015</resolution>
+         </range>
+      </ray>
+      
+      <plugin name="gazebo_ros_head_rplidar_controller" filename="libgazebo_ros_laser.so">
+         <topicName>scan</topicName>
+         <frameName>lidar_link</frameName>
+         <gaussianNoise>0.01</gaussianNoise> 
+      </plugin>
+   </sensor>
+</gazebo> 
+
+  <link name="base_footprint"/>
+
+  <joint name="base_footprint_to_base_link" type="fixed">
+    <parent link="base_footprint"/>
+    <child link="base_link"/>
+  </joint>
+
+  <gazebo>
+    <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
+      <updateRate>100.0</updateRate>
+      <robotNamespace></robotNamespace>
+
+      <leftFrontJoint>l1_joint</leftFrontJoint>
+      <rightFrontJoint>r1_joint</rightFrontJoint>
+      <leftRearJoint>l2_joint</leftRearJoint>
+      <rightRearJoint>r2_joint</rightRearJoint>
+      <wheelSeparation>0.5</wheelSeparation>
+      <wheelDiameter>0.1</wheelDiameter>
+
+      <torque>1.0</torque>
+
+      <broadcastTF>true</broadcastTF>
+      <commandTopic>cmd_vel</commandTopic>
+      <odometryTopic>odom</odometryTopic>
+      <odometryFrame>odom</odometryFrame>
+      <robotBaseFrame>base_footprint</robotBaseFrame>
+      <publishWheelTF>true</publishWheelTF>
+      <publishOdom>true</publishOdom>
+      <publishWheelJointState>true</publishWheelJointState>
+      <covariance_x>0.0001</covariance_x>
+      <covariance_y>0.0001</covariance_y>
+      <covariance_yaw>0.01</covariance_yaw>
+    </plugin>
+  </gazebo>
+</robot>
